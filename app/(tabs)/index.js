@@ -17,7 +17,7 @@ export default function Home() {
         </View>
       </View>
 
-      <Text style={globalStyles.heading}>Welcome!</Text>
+      <Text style={globalStyles.heading}>WELCOME!</Text>
 
       <View style={globalStyles.imageWelcomeBox}>
         <Image
@@ -56,7 +56,7 @@ export default function Home() {
           <Pressable
             style={globalStyles.submitButton}
             onPress={() => {
-              console.log(`Username: ${name}`);
+              console.log(`button START pressed`);
             }}
           >
             <Text style={globalStyles.submitButtonText}>START</Text>
