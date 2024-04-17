@@ -1,5 +1,10 @@
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Foundation } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import { COLORS } from "../../styles/constants";
 
 export default function MainTabs() {
@@ -7,15 +12,16 @@ export default function MainTabs() {
     <Tabs
       screenOptions={{
         headerStyle: {
-          backgroundColor: COLORS.dark,
+          backgroundColor: COLORS.green1,
         },
-        headerTintColor: COLORS.light,
+        headerTintColor: COLORS.purple,
         tabBarStyle: {
-          backgroundColor: COLORS.dark,
+          backgroundColor: COLORS.green1,
         },
         tabBarActiveTintColor: COLORS.primary,
         tabBarLabelStyle: {
-          fontSize: 25,
+          fontSize: 20,
+          color: COLORS.purple,
         },
       }}
     >
@@ -23,7 +29,7 @@ export default function MainTabs() {
         name="index"
         options={{
           tabBarIcon: () => {
-            return <AntDesign name="banckward" size={24} color="black" />;
+            return <AntDesign name="caretright" size={24} color="#754668" />;
           },
         }}
       />
@@ -31,7 +37,9 @@ export default function MainTabs() {
         name="game"
         options={{
           tabBarIcon: () => {
-            return <AntDesign name="creditcard" size={24} color="black" />;
+            return (
+              <Ionicons name="game-controller" size={24} color="#754668" />
+            );
           },
         }}
       />
@@ -39,7 +47,7 @@ export default function MainTabs() {
         name="ads"
         options={{
           tabBarIcon: () => {
-            return <AntDesign name="creditcard" size={24} color="black" />;
+            return <Foundation name="burst-sale" size={28} color="#754668" />;
           },
         }}
       />
@@ -47,7 +55,21 @@ export default function MainTabs() {
         name="details"
         options={{
           tabBarIcon: () => {
-            return <AntDesign name="creditcard" size={24} color="black" />;
+            return <FontAwesome name="file-text" size={24} color="#754668" />;
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="result"
+        options={{
+          tabBarIcon: () => {
+            return (
+              <MaterialIcons
+                name="published-with-changes"
+                size={24}
+                color="#754668"
+              />
+            );
           },
         }}
       />

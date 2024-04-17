@@ -17,6 +17,7 @@ export const globalStyles = StyleSheet.create({
     justifyContent: "space-around",
   },
   loginSmallbox: {
+    minWidth: 100,
     backgroundColor: COLORS.green2,
     fontSize: 20,
     paddingLeft: 15,
@@ -30,11 +31,10 @@ export const globalStyles = StyleSheet.create({
     color: COLORS.purple,
     fontSize: 20,
   },
-
   headingTop: {
     marginTop: 10,
-    fontSize: 30,
-    fontWeight: "900",
+    fontSize: 35,
+    fontWeight: "600",
     color: COLORS.green2,
   },
   heading: {
@@ -96,6 +96,23 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "500",
     color: COLORS.yellow,
     textAlign: "center",
+    justifyContent: "center",
+  },
+  textSmall: {
+    fontSize: 27,
+    color: COLORS.purple,
+    textAlign: "center",
+    marginTop: 10,
+  },
+  answerBox: {
+    marginTop: 15,
+    paddingBottom: 3,
+    paddingLeft: 10,
+    paddingRight: 10,
+    width: "100%",
+    height: 78,
+    backgroundColor: COLORS.yellow,
+    borderRadius: 7,
     justifyContent: "center",
   },
 });
