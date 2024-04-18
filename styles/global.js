@@ -62,17 +62,17 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 5,
     color: COLORS.purple,
   },
-  loginButtonBox: {
+  yellowButtonBox: {
     alignItems: "center",
   },
-  loginButton: {
+  yellowButton: {
     marginTop: 30,
     borderRadius: 8,
     backgroundColor: COLORS.yellow,
     height: 60,
     width: 150,
   },
-  loginButtonText: {
+  yellowButtonText: {
     color: COLORS.purple,
     textAlign: "center",
     justifyContent: "center",
@@ -80,17 +80,17 @@ export const globalStyles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "500",
   },
-  submitButtonBox: {
+  greyButtonBox: {
     alignItems: "center",
   },
-  submitButton: {
+  greyButton: {
     marginTop: 30,
     borderRadius: 8,
     backgroundColor: COLORS.grey,
     height: 60,
     width: 150,
   },
-  submitButtonText: {
+  greyButtonText: {
     marginTop: 10,
     fontSize: 30,
     fontWeight: "500",
@@ -114,5 +114,29 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: COLORS.yellow,
     borderRadius: 7,
     justifyContent: "center",
+  },
+
+  imageAdsBox: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+  },
+  imageAds: {
+    height: 290,
+    objectFit: "contain",
+  },
+  detailsAdsBox: {
+    height: 390,
+    backgroundColor: "white",
+    marginTop: 20,
+    borderRadius: 15,
+    padding: 20,
+  },
+  resultBox: {
+    height: 390,
+    backgroundColor: COLORS.yellow,
+    marginTop: 20,
+    borderRadius: 15,
+    padding: 20,
   },
 });

@@ -62,9 +62,9 @@ export default function Game() {
         </Text>
       </View>
       {/* /////////////////// Answers /////////////////////////////////// */}
-      <View style={globalStyles.submitButtonBox}>
+      <View style={globalStyles.greyButtonBox}>
         <Pressable
-          style={globalStyles.submitButton}
+          style={globalStyles.greyButton}
           onPress={() => {
             if (currentIndex < questions.length - 1) {
               handleClick();
@@ -74,7 +74,7 @@ export default function Game() {
             console.log(`button NEXT pressed`);
           }}
         >
-          <Text style={globalStyles.submitButtonText}>NEXT</Text>
+          <Text style={globalStyles.greyButtonText}>NEXT</Text>
         </Pressable>
       </View>
     </View>

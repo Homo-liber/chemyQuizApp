@@ -1,4 +1,5 @@
 import { View, Text, Image, TextInput, Button, Pressable } from "react-native";
+import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global";
 import { useState } from "react";
 
@@ -41,25 +42,27 @@ export default function Home() {
           value={name}
         />
 
-        <View style={globalStyles.loginButtonBox}>
+        <View style={globalStyles.yellowButtonBox}>
           <Pressable
-            style={globalStyles.loginButton}
+            style={globalStyles.yellowButton}
             onPress={() => {
               console.log(`Username: ${name}`);
             }}
           >
-            <Text style={globalStyles.loginButtonText}>LOGIN</Text>
+            <Text style={globalStyles.yellowButtonText}>LOGIN</Text>
           </Pressable>
         </View>
 
-        <View style={globalStyles.submitButtonBox}>
+        <View style={globalStyles.greyButtonBox}>
           <Pressable
-            style={globalStyles.submitButton}
+            style={globalStyles.greyButton}
             onPress={() => {
               console.log(`button START pressed`);
             }}
           >
-            <Text style={globalStyles.submitButtonText}>START</Text>
+            <Link href="game" style={globalStyles.greyButtonText}>
+              START
+            </Link>
           </Pressable>
         </View>
       </View>

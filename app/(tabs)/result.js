@@ -13,7 +13,11 @@ export default function Result() {
         </View>
       </View>
 
-      <Text style={globalStyles.text}>GREAT RESULT!🎉 🥳🎉 🥳🎉 🥳</Text>
+      <Text style={globalStyles.heading}>GREAT RESULT!</Text>
+
+      <View style={globalStyles.resultBox}>
+        <Text>🎉 🥳🎉 🥳🎉 🥳</Text>
+      </View>
     </View>
   );
 }
