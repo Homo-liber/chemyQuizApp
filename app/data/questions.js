@@ -39,4 +39,49 @@ export const questions = [
     correctAnswer: 2,
     index: 4,
   },
+  {
+    q: "What is the chemical formula of methane?",
+    answer: ["CH", "С₂H", "С₂H₄", "CH₄"],
+    correctAnswer: 3,
+    index: 5,
+  },
+  {
+    q: "Elements that have the same number of protons but different numbers of neutrons",
+    answer: [
+      "oxidizing agent and reducing agent",
+      "isotopes",
+      "donor and acceptor",
+      "amino acids",
+    ],
+    correctAnswer: 1,
+    index: 6,
+  },
+  {
+    q: "What is the size of a hydrogen atom?",
+    answer: [
+      "1 mm",
+      "0,5 mm",
+      "the size of the hydrogen atom is not determined",
+      "0,000001 mm",
+    ],
+    correctAnswer: 3,
+    index: 7,
+  },
+  {
+    q: "What is the formula of ozone? (Earth's ozone layer)?",
+    answer: ["NO2", "O3", "O2", "Na2"],
+    correctAnswer: 1,
+    index: 8,
+  },
+  {
+    q: "Why do electrons in the nucleus of an atom not fall onto the nucleus?",
+    answer: [
+      "they're falling!",
+      "because they don't want to : )",
+      "because there's no gravity in the atom",
+      "because electrons can only be in their orbits",
+    ],
+    correctAnswer: 3,
+    index: 8,
+  },
 ];

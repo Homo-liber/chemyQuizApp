@@ -1,5 +1,5 @@
 export const COLORS = {
-  yellow: "#f9eba2",
+  yellow: "#f9eccc",
   purple: "#754668",
   green1: "#b3f2bb",
   green2: "#4daa57",
@@ -9,9 +9,3 @@ export const COLORS = {
 };
 export const FONTS = {};
 export const SPACINGS = {};
-
-// #b3f2bb
-// green1: "#b5dda4",
-
-// #f9eba2
-// yellow: "#f9eccc",
