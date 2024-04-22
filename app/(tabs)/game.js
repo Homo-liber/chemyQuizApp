@@ -35,6 +35,7 @@ export default function Game() {
       {/* /////////////////// A-n-s-w-e-r-s Start /////////////////////////////////// */}
 
       <Pressable
+        disabled={selectedAnswer != null}
         style={[
           globalStyles.answerBox,
           {
@@ -48,7 +49,6 @@ export default function Game() {
         ]}
         onPress={() => {
           setSelectedAnswer(0);
-          console.log(`answer "A" is pressed`);
         }}
       >
         <Text style={globalStyles.textAnswers}>
@@ -56,6 +56,7 @@ export default function Game() {
         </Text>
       </Pressable>
       <Pressable
+        disabled={selectedAnswer != null}
         style={[
           globalStyles.answerBox,
           {
@@ -69,7 +70,6 @@ export default function Game() {
         ]}
         onPress={() => {
           setSelectedAnswer(1);
-          console.log(`answer "B" is pressed`);
         }}
       >
         <Text style={globalStyles.textAnswers}>
@@ -77,6 +77,7 @@ export default function Game() {
         </Text>
       </Pressable>
       <Pressable
+        disabled={selectedAnswer != null}
         style={[
           globalStyles.answerBox,
           {
@@ -90,7 +91,6 @@ export default function Game() {
         ]}
         onPress={() => {
           setSelectedAnswer(2);
-          console.log(`answer "C" is pressed`);
         }}
       >
         <Text style={globalStyles.textAnswers}>
@@ -98,6 +98,7 @@ export default function Game() {
         </Text>
       </Pressable>
       <Pressable
+        disabled={selectedAnswer != null}
         style={[
           globalStyles.answerBox,
           {
@@ -111,7 +112,6 @@ export default function Game() {
         ]}
         onPress={() => {
           setSelectedAnswer(3);
-          console.log(`answer "D" is pressed`);
         }}
       >
         <Text style={globalStyles.textAnswers}>
@@ -121,22 +121,23 @@ export default function Game() {
       {/* /////////////////// A-n-s-w-e-r-s End /////////////////////////////////// */}
       <View style={globalStyles.greyButtonBox}>
         <Pressable
+          disabled={selectedAnswer == null}
           style={globalStyles.greyButton}
           onPress={() => {
             if (currentIndex < questions.length - 1) {
               handleClick();
             }
-            console.log(`button NEXT pressed`);
+            // console.log(`button NEXT pressed`);
             setSelectedAnswer(null);
           }}
         >
-          <Text style={globalStyles.greyButtonText}>NEXT</Text>
-          {/* <Link
-            href={currentIndex == questions.length ? "ads" : "game"}
-            style={globalStyles.greyButtonText}
+          <Link
+            disabled={currentIndex < questions.length - 1}
+            href={"ads"}
+            style={{ paddingTop: 13 }}
           >
-            NEXT
-          </Link> */}
+            <Text style={globalStyles.greyButtonText}>NEXT</Text>
+          </Link>
         </Pressable>
       </View>
     </View>
