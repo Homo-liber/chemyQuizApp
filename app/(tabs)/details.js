@@ -18,16 +18,21 @@ export default function DetailsAds() {
       </View>
 
       <View style={globalStyles.detailsAdsBox}>
+        <Text style={globalStyles.heading}>Advertisment details</Text>
         <Text style={[globalStyles.textSmall, { textAlign: "justify" }]}>
-          Lorem ispum placerat mi, eu varius velit. Aenean sagittis at arcu id
-          feugiat. Nullam mattis urna ante, sed rutrum ipsum tempus ut. Interdum
-          et malesuada fames ac ante ipsum primis in faucibus. Aenean varius
-          lorem a lacinia commodo.{"\n"}
-          <Text style={[globalStyles.textSmall, { color: "red" }]}>
-            Chemie Museum: {"\n"}
-          </Text>
-          <TouchableOpacity onPress={openLink}>
-            <Text style={[globalStyles.textSmall, { color: "red" }]}>link</Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas
+          ullamcorper ultrices. Ut id viverra libero. Vivamus eros felis,
+          convallis varius aliquet non, viverra nec lacus. Nunc vestibulum
+          sollicitudin risus, quis mollis est bibendum sit amet. {"\n"}
+          <TouchableOpacity onPress={openLink} style={globalStyles.linkBox}>
+            <Text
+              style={[
+                globalStyles.textSmall,
+                { color: "red", textAlign: "justify" },
+              ]}
+            >
+              {link}
+            </Text>
           </TouchableOpacity>
         </Text>
       </View>

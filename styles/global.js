@@ -15,6 +15,7 @@ export const globalStyles = StyleSheet.create({
   titelBox: {
     flexDirection: "row",
     justifyContent: "space-around",
+    marginTop: -20,
   },
   loginSmallbox: {
     minWidth: 100,
@@ -38,7 +39,7 @@ export const globalStyles = StyleSheet.create({
     color: COLORS.green2,
   },
   heading: {
-    marginTop: 10,
+    marginTop: 20,
     fontSize: 30,
     fontWeight: "500",
     color: COLORS.purple,
@@ -70,7 +71,7 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: COLORS.yellow,
     height: 60,
-    width: 150,
+    width: 190,
   },
   yellowButtonText: {
     color: COLORS.purple,
@@ -88,7 +89,7 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: COLORS.grey,
     height: 60,
-    width: 150,
+    width: 190,
   },
   greyButtonText: {
     marginTop: 10,
@@ -116,6 +117,14 @@ export const globalStyles = StyleSheet.create({
     justifyContent: "center",
   },
 
+  textAnswers: {
+    fontSize: 24,
+    color: COLORS.purple,
+    textAlign: "center",
+    marginTop: 10,
+    textAlign: "left",
+  },
+
   imageAdsBox: {
     justifyContent: "center",
     alignItems: "center",
@@ -126,17 +135,22 @@ export const globalStyles = StyleSheet.create({
     objectFit: "contain",
   },
   detailsAdsBox: {
-    height: 390,
     backgroundColor: "white",
     marginTop: 20,
     borderRadius: 15,
     padding: 20,
+    paddingTop: 0,
   },
   resultBox: {
-    height: 390,
     backgroundColor: COLORS.yellow,
     marginTop: 20,
     borderRadius: 15,
     padding: 20,
+    paddingBottom: 40,
+  },
+  linkBox: {
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
   },
 });

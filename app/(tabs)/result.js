@@ -1,5 +1,6 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { globalStyles } from "../../styles/global";
+import { Link } from "expo-router";
 
 export default function Result() {
   return (
@@ -13,10 +14,27 @@ export default function Result() {
         </View>
       </View>
 
-      <Text style={globalStyles.heading}>GREAT RESULT!</Text>
+      <Text style={globalStyles.heading}>CONGRATULATION USER!</Text>
 
       <View style={globalStyles.resultBox}>
-        <Text>🎉 🥳🎉 🥳🎉 🥳</Text>
+        <Text style={globalStyles.textSmall}>You answered</Text>
+        <Text style={globalStyles.textSmall}>13 out of 15</Text>
+        <Text style={globalStyles.textSmall}>questions correctly</Text>
+        <Text style={globalStyles.textSmall}>Great result!</Text>
+        <Text style={[globalStyles.textSmall, { fontSize: 60 }]}>🎉 🥳</Text>
+      </View>
+
+      <View style={globalStyles.greyButtonBox}>
+        <Pressable
+          style={globalStyles.greyButton}
+          onPress={() => {
+            console.log(`button START pressed`);
+          }}
+        >
+          <Link href="#" style={globalStyles.greyButtonText}>
+            NEW GAME
+          </Link>
+        </Pressable>
       </View>
     </View>
   );

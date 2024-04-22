@@ -18,7 +18,7 @@ export default function Ads() {
       <View style={globalStyles.imageAdsBox}>
         <Image
           style={globalStyles.imageAds}
-          source={require("../../assets/ads.png")}
+          source={require("../../assets/ads.jpg")}
         />
       </View>
 
