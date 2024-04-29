@@ -22,23 +22,23 @@ export const questions = [
     correctAnswer: 2,
     index: 2,
   },
-  {
-    q: "What chemical element is the most abundant on Earth?",
-    answer: ["Hydrogen", "Oxygen", "Nitrogen", "Water"],
-    correctAnswer: 1,
-    index: 3,
-  },
-  {
-    q: "What is the density of matter in the nucleus of an atom?",
-    answer: [
-      "10 times the density of water",
-      "it is different for different substances",
-      "0.5*10^12kg/cm³",
-      "unfortunately, scientists don’t know this yet",
-    ],
-    correctAnswer: 2,
-    index: 4,
-  },
+  // {
+  //   q: "What chemical element is the most abundant on Earth?",
+  //   answer: ["Hydrogen", "Oxygen", "Nitrogen", "Water"],
+  //   correctAnswer: 1,
+  //   index: 3,
+  // },
+  // {
+  //   q: "What is the density of matter in the nucleus of an atom?",
+  //   answer: [
+  //     "10 times the density of water",
+  //     "it is different for different substances",
+  //     "0.5*10^12kg/cm³",
+  //     "unfortunately, scientists don’t know this yet",
+  //   ],
+  //   correctAnswer: 2,
+  //   index: 4,
+  // },
   // {
   //   q: "What is the chemical formula of methane?",
   //   answer: ["CH", "С₂H", "С₂H₄", "CH₄"],

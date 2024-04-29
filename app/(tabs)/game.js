@@ -1,12 +1,18 @@
 import { View, Text, Pressable } from "react-native";
 import { globalStyles } from "../../styles/global";
-import { questions } from "../data/questions";
+import { questions } from "../../data/questions";
 import { useState } from "react";
 import { Link } from "expo-router";
+import { useContext } from "react";
+import { UsersNameContext } from "../../context/UsersNameContext";
 
 export default function Game() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+  const { name, updateUsername } = useContext(UsersNameContext);
+
+  const contextData = useContext(UsersNameContext);
 
   const handleClick = () => {
     setCurrentIndex(currentIndex + 1);
@@ -20,10 +26,10 @@ export default function Game() {
     <View style={globalStyles.container}>
       <View style={globalStyles.titelBox}>
         <View>
-          <Text style={globalStyles.headingTop}>Chemistry quiz</Text>
+          <Text style={globalStyles.headingTop}>Chemistry Quiz</Text>
         </View>
         <View style={globalStyles.loginSmallbox}>
-          <Text style={globalStyles.loginText}></Text>
+          <Text style={globalStyles.loginText}>{name}</Text>
         </View>
       </View>
       <Text style={globalStyles.heading}>QUIZ QUESTIONS</Text>
