@@ -12,9 +12,6 @@ export default function Home() {
   const { name, updateUsername } = useContext(UsersNameContext);
 
   const contextData = useContext(UsersNameContext);
-  {
-    /* contextData is again a name that you can choose. It holds the value object from the provider */
-  }
 
   return (
     <View style={globalStyles.container}>
@@ -23,7 +20,7 @@ export default function Home() {
           <Text style={globalStyles.headingTop}>Chemistry Quiz</Text>
         </View>
         <View style={globalStyles.loginSmallbox}>
-          <Text style={globalStyles.loginText}>{name}</Text>
+          <Text style={globalStyles.loginText}>{login}</Text>
         </View>
       </View>
       <Text style={globalStyles.heading}>WELCOME!</Text>

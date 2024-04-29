@@ -7,7 +7,6 @@ import { UsersNameContext } from "../../context/UsersNameContext";
 
 export default function Result() {
   const { name, updateUsername } = useContext(UsersNameContext);
-
   const contextData = useContext(UsersNameContext);
 
   return (
@@ -21,7 +20,10 @@ export default function Result() {
         </View>
       </View>
 
-      <Text style={globalStyles.heading}>CONGRATULATION USER!</Text>
+      <Text style={globalStyles.heading}>
+        CONGRATULATION
+        <Text style={{ color: "red" }}> {name}</Text>!
+      </Text>
 
       <View style={globalStyles.resultBox}>
         <Text style={globalStyles.textSmall}>You answered</Text>

@@ -25,8 +25,8 @@ export default function DetailsAds() {
 
       <View style={globalStyles.detailsAdsBox}>
         <Text style={globalStyles.heading}>Advertisment details</Text>
-        {/* textAlign: "justify" */}
-        <Text style={[globalStyles.textSmall, {}]}>
+        {/*  */}
+        <Text style={[globalStyles.textSmall, { textAlign: "justify" }]}>
           With a collection of historically valuable original systems and
           machines and equipment from the chemical industry from the region
           unique in Europe. There are currently over 300 exhibits on display.
