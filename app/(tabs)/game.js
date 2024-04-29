@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from "react-native";
 import { globalStyles } from "../../styles/global";
-import { questions } from "../data/questions";
+import { questions } from "../../data/questions";
 import { useState } from "react";
 import { Link } from "expo-router";
 
@@ -20,7 +20,7 @@ export default function Game() {
     <View style={globalStyles.container}>
       <View style={globalStyles.titelBox}>
         <View>
-          <Text style={globalStyles.headingTop}>Chemistry quiz</Text>
+          <Text style={globalStyles.headingTop}>Chemistry Quiz</Text>
         </View>
         <View style={globalStyles.loginSmallbox}>
           <Text style={globalStyles.loginText}></Text>

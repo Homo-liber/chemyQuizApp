@@ -10,7 +10,7 @@ export default function DetailsAds() {
     <View style={globalStyles.container}>
       <View style={globalStyles.titelBox}>
         <View>
-          <Text style={globalStyles.headingTop}>Chemistry quiz</Text>
+          <Text style={globalStyles.headingTop}>Chemistry Quiz</Text>
         </View>
         <View style={globalStyles.loginSmallbox}>
           <Text style={globalStyles.loginText}></Text>
