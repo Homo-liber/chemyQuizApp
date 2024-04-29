@@ -1,8 +1,14 @@
 import { View, Text, Image, Pressable } from "react-native";
 import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global";
+import { useContext } from "react";
+import { UsersNameContext } from "../../context/UsersNameContext";
 
 export default function Ads() {
+  const { name, updateUsername } = useContext(UsersNameContext);
+
+  const contextData = useContext(UsersNameContext);
+
   return (
     <View style={globalStyles.container}>
       <View style={globalStyles.titelBox}>
@@ -10,7 +16,7 @@ export default function Ads() {
           <Text style={globalStyles.headingTop}>Chemistry Quiz</Text>
         </View>
         <View style={globalStyles.loginSmallbox}>
-          <Text style={globalStyles.loginText}></Text>
+          <Text style={globalStyles.loginText}>{name}</Text>
         </View>
       </View>
       <Text style={globalStyles.heading}>ADVERTISMENT</Text>
