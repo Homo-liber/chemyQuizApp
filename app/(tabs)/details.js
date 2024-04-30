@@ -10,7 +10,7 @@ export default function DetailsAds() {
 
   const { name, updateUsername } = useContext(UsersNameContext);
 
-  const contextData = useContext(UsersNameContext);
+  // const contextData = useContext(UsersNameContext);
 
   return (
     <View style={globalStyles.container}>

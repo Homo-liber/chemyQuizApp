@@ -12,10 +12,8 @@ export default function Game() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const { name, updateUsername } = useContext(UsersNameContext);
-  const contextData = useContext(UsersNameContext);
 
   const { trueAnswers, updateCorrectly } = useContext(CorrectlyContext);
-  const contextData = useContext(CorrectlyContext);
 
   const handleClick = () => {
     setCurrentIndex(currentIndex + 1);
@@ -35,7 +33,7 @@ export default function Game() {
           <Text style={globalStyles.loginText}>{name}</Text>
         </View>
       </View>
-      <Text style={globalStyles.heading}>QUIZ QUESTIONS</Text>
+      <Text style={globalStyles.heading}>QUIZ QUESTIONS {trueAnswers}</Text>
       <Text style={globalStyles.textSmall}>
         {currentIndex + 1} / {questions.length}
       </Text>
@@ -133,16 +131,22 @@ export default function Game() {
           disabled={selectedAnswer == null}
           style={globalStyles.greyButton}
           onPress={() => {
-            updateCorrectly();
+            console.log("button NEXT is pressed");
+
+            if (selectedAnswer == questions[currentIndex].correctAnswer) {
+              updateCorrectly();
+            }
+
             if (currentIndex < questions.length - 1) {
               handleClick();
             }
-            // console.log(`button NEXT pressed`);
+
             setSelectedAnswer(null);
           }}
         >
           <Link
-            disabled={currentIndex < questions.length - 1}
+            // disabled={currentIndex < questions.length - 1}
+            disabled={currentIndex < questions.length}
             href={"ads"}
             style={{ paddingTop: 13 }}
           >

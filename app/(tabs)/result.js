@@ -2,17 +2,16 @@ import { View, Text, Pressable } from "react-native";
 import { globalStyles } from "../../styles/global";
 import { Link } from "expo-router";
 import { useState } from "react";
+import { questions } from "../../data/questions";
 import { useContext } from "react";
 import { UsersNameContext } from "../../context/UsersNameContext";
 import { CorrectlyContext } from "../../context/CorrectlyContext";
-import { questions } from "../../data/questions";
 
 export default function Result() {
   const { name, updateUsername } = useContext(UsersNameContext);
-  const contextData = useContext(UsersNameContext);
+  // const contextData = useContext(UsersNameContext);
 
   const { trueAnswers, updateCorrectly } = useContext(CorrectlyContext);
-  const contextData = useContext(CorrectlyContext);
 
   return (
     <View style={globalStyles.container}>
@@ -41,7 +40,7 @@ export default function Result() {
         <Pressable
           style={globalStyles.greyButton}
           onPress={() => {
-            console.log(`button START pressed`);
+            console.log(`button START NEW GAME pressed`);
           }}
         >
           <Link href="#" style={globalStyles.greyButtonText}>

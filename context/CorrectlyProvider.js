@@ -4,8 +4,11 @@ import { useState } from "react";
 export default function CorrectlyProvider({ children }) {
   const [correctly, setCorrectly] = useState(0);
 
-  function updateCorrectly(correctly) {
-    setCorrectly(correctly + 1);
+  function updateCorrectly() {
+    setCorrectly((tofu) => {
+      return tofu + 1;
+    });
+    console.log(correctly);
   }
 
   return (

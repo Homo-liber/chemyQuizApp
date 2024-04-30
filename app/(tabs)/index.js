@@ -6,10 +6,9 @@ import { useContext } from "react";
 import { UsersNameContext } from "../../context/UsersNameContext";
 
 export default function Home() {
-  const [login, setLogin] = useState("Username");
+  const [nameOfUser, setNameOfUser] = useState("");
 
   const { name, updateUsername } = useContext(UsersNameContext);
-  const contextData = useContext(UsersNameContext);
 
   return (
     <View style={globalStyles.container}>
@@ -38,10 +37,12 @@ export default function Home() {
           onChangeText={(text) => {
             // setName(text);
             updateUsername(text);
-            setLogin(text);
+            // setLogin(text);
+            setNameOfUser(text);
           }}
           // set the value of the TextInput to the value of the state variable to "bind" it to the state
-          value={name}
+          // value={name}
+          value={nameOfUser}
         />
 
         <View style={globalStyles.yellowButtonBox}>
@@ -49,7 +50,6 @@ export default function Home() {
             style={globalStyles.yellowButton}
             onPress={() => {
               console.log(`Username: ${name}`);
-              console.log(contextData);
             }}
           >
             <Text style={globalStyles.yellowButtonText}>LOGIN</Text>
