@@ -5,14 +5,17 @@ import { useState } from "react";
 import { Link } from "expo-router";
 import { useContext } from "react";
 import { UsersNameContext } from "../../context/UsersNameContext";
+import { CorrectlyContext } from "../../context/CorrectlyContext";
 
 export default function Game() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const { name, updateUsername } = useContext(UsersNameContext);
-
   const contextData = useContext(UsersNameContext);
+
+  const { trueAnswers, updateCorrectly } = useContext(CorrectlyContext);
+  const contextData = useContext(CorrectlyContext);
 
   const handleClick = () => {
     setCurrentIndex(currentIndex + 1);
@@ -130,6 +133,7 @@ export default function Game() {
           disabled={selectedAnswer == null}
           style={globalStyles.greyButton}
           onPress={() => {
+            updateCorrectly();
             if (currentIndex < questions.length - 1) {
               handleClick();
             }

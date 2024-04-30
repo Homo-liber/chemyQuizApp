@@ -6,15 +6,10 @@ import { useContext } from "react";
 import { UsersNameContext } from "../../context/UsersNameContext";
 
 export default function Home() {
-  // const [name, setName] = useState("");
   const [login, setLogin] = useState("Username");
 
   const { name, updateUsername } = useContext(UsersNameContext);
-
   const contextData = useContext(UsersNameContext);
-  {
-    /* contextData is again a name that you can choose. It holds the value object from the provider */
-  }
 
   return (
     <View style={globalStyles.container}>
